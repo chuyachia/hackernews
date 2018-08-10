@@ -1,22 +1,33 @@
+Test for Web Devs to do in ReactJS:
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+ 
 
+Develop a web application in ReactJS that is consuming HackerNews REST API to:
 
-Welcome to your Node.js project on Cloud9 IDE!
+1.       Display the top 10 Stories; and
 
-This chat example showcases how to use `socket.io` with a static `express` server.
+2.       Display top 20 comments of those stories; and
 
-## Running the server
+3.       Is responsive design
 
-1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
+ 
 
-2) Alternatively you can launch the app from the Terminal:
+Note: Please keep in mind the following two main factors:
 
-    $ node server.js
+·         Performance
 
-Once the server is running, open the project in the shape of 'https://projectname-username.c9users.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
+·         Efficiency
+
+ 
+
+2. Please provide your test in a public git repository
+
+ 
+
+3. Bonus point, include Unit Tests
+
+ 
+
+Documentation:
+
+HackerNews REST API: https://github.com/HackerNews/API

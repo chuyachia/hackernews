@@ -1,0 +1,12 @@
+{
+  "by" : "xxx",
+  "descendants" : 71,
+  "id" : 1,
+  "kids":[2,3],
+  "score" : 111,
+  "time" : 1175714200,
+  "title" : "Fake title",
+  "text": "Fake comment",
+  "type" : "story",
+  "url" : "http://www.getdropbox.com/u/2/screencast.html"
+}

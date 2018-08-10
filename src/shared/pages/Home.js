@@ -39,7 +39,7 @@ const Footer=styled.div`
     }
 `
 const hnUrl= "https://hacker-news.firebaseio.com/v0/";
-class Main extends React.Component {
+class Home extends React.Component {
     constructor(){
         super();
         this.state={
@@ -80,4 +80,4 @@ class Main extends React.Component {
 }
 
 
-export default Main;
+export default Home;

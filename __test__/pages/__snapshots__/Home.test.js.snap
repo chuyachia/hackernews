@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home snapshot test 1`] = `
+<styled.div>
+  <styled.div>
+    <h3>
+      Top 10 Hacker News Stories
+    </h3>
+    <i>
+      With top 20 comments and their replies
+    </i>
+  </styled.div>
+  <styled.ul>
+    <News
+      data={
+        Object {
+          "by": "xxx",
+          "descendants": 71,
+          "id": 1,
+          "score": 111,
+          "text": "Fake comment",
+          "time": 1175714200,
+          "title": "Fake title",
+          "type": "story",
+          "url": "http://www.getdropbox.com/u/2/screencast.html",
+        }
+      }
+      key="0"
+    />
+    <News
+      data={
+        Object {
+          "by": "xxx",
+          "descendants": 71,
+          "id": 1,
+          "score": 111,
+          "text": "Fake comment",
+          "time": 1175714200,
+          "title": "Fake title",
+          "type": "story",
+          "url": "http://www.getdropbox.com/u/2/screencast.html",
+        }
+      }
+      key="1"
+    />
+    <News
+      data={
+        Object {
+          "by": "xxx",
+          "descendants": 71,
+          "id": 1,
+          "score": 111,
+          "text": "Fake comment",
+          "time": 1175714200,
+          "title": "Fake title",
+          "type": "story",
+          "url": "http://www.getdropbox.com/u/2/screencast.html",
+        }
+      }
+      key="2"
+    />
+    <News
+      data={
+        Object {
+          "by": "xxx",
+          "descendants": 71,
+          "id": 1,
+          "score": 111,
+          "text": "Fake comment",
+          "time": 1175714200,
+          "title": "Fake title",
+          "type": "story",
+          "url": "http://www.getdropbox.com/u/2/screencast.html",
+        }
+      }
+      key="3"
+    />
+    <News
+      data={
+        Object {
+          "by": "xxx",
+          "descendants": 71,
+          "id": 1,
+          "score": 111,
+          "text": "Fake comment",
+          "time": 1175714200,
+          "title": "Fake title",
+          "type": "story",
+          "url": "http://www.getdropbox.com/u/2/screencast.html",
+        }
+      }
+      key="4"
+    />
+    <News
+      data={
+        Object {
+          "by": "xxx",
+          "descendants": 71,
+          "id": 1,
+          "score": 111,
+          "text": "Fake comment",
+          "time": 1175714200,
+          "title": "Fake title",
+          "type": "story",
+          "url": "http://www.getdropbox.com/u/2/screencast.html",
+        }
+      }
+      key="5"
+    />
+    <News
+      data={
+        Object {
+          "by": "xxx",
+          "descendants": 71,
+          "id": 1,
+          "score": 111,
+          "text": "Fake comment",
+          "time": 1175714200,
+          "title": "Fake title",
+          "type": "story",
+          "url": "http://www.getdropbox.com/u/2/screencast.html",
+        }
+      }
+      key="6"
+    />
+    <News
+      data={
+        Object {
+          "by": "xxx",
+          "descendants": 71,
+          "id": 1,
+          "score": 111,
+          "text": "Fake comment",
+          "time": 1175714200,
+          "title": "Fake title",
+          "type": "story",
+          "url": "http://www.getdropbox.com/u/2/screencast.html",
+        }
+      }
+      key="7"
+    />
+    <News
+      data={
+        Object {
+          "by": "xxx",
+          "descendants": 71,
+          "id": 1,
+          "score": 111,
+          "text": "Fake comment",
+          "time": 1175714200,
+          "title": "Fake title",
+          "type": "story",
+          "url": "http://www.getdropbox.com/u/2/screencast.html",
+        }
+      }
+      key="8"
+    />
+    <News
+      data={
+        Object {
+          "by": "xxx",
+          "descendants": 71,
+          "id": 1,
+          "score": 111,
+          "text": "Fake comment",
+          "time": 1175714200,
+          "title": "Fake title",
+          "type": "story",
+          "url": "http://www.getdropbox.com/u/2/screencast.html",
+        }
+      }
+      key="9"
+    />
+  </styled.ul>
+  <styled.div>
+    Made by 
+    <a
+      href="https://github.com/chuyachia"
+      target="_blank"
+    >
+      Chu-Ya Chia
+    </a>
+  </styled.div>
+</styled.div>
+`;

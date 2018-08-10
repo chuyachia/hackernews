@@ -101,9 +101,10 @@ class News extends React.Component {
             <Newsitem>
                 {<Title href={this.props.data.url} target="_blank"  title="Open link">{this.props.data.title}&nbsp;</Title>}
                 {<Author>by&nbsp;{this.props.data.by}</Author>}
-                {<ShowHide onClick={()=>this.showComments()}>{this.state.showcomments?<i title="Hide comments" class="fas fa-sort-up"></i>
+                {<ShowHide id="showhide" onClick={()=>this.showComments()}>
+                {this.state.showcomments?<i title="Hide comments" class="fas fa-sort-up"></i>
                 :<i title="Show comments" class="fas fa-sort-down"></i>}</ShowHide>}
-                {<UnstyledUl visible={this.state.showcomments}>
+                {<UnstyledUl visible={this.state.showcomments} onClick={()=>this.showComments()}>
                         {this.props.data.kids?(this.state.comments?this.state.comments:<Loader/>):<li>No comment to show...</li>}
                 </UnstyledUl>}
             </Newsitem>

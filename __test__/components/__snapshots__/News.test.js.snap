@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`News test News snapshot test 1`] = `
+<styled.li>
+  <styled.a
+    href="http://www.getdropbox.com/u/2/screencast.html"
+    target="_blank"
+    title="Open link"
+  >
+    Fake title
+     
+  </styled.a>
+  <styled.span>
+    by 
+    xxx
+  </styled.span>
+  <styled.span
+    id="showhide"
+    onClick={[Function]}
+  >
+    <i
+      className="fas fa-sort-down"
+      title="Show comments"
+    />
+  </styled.span>
+  <styled.ul
+    onClick={[Function]}
+    visible={false}
+  >
+    <styled.div />
+  </styled.ul>
+</styled.li>
+`;
