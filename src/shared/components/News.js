@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import styled from 'styled-components';
+import styled , { keyframes } from 'styled-components';
 import Comments from "./Comments";
 
 const UnstyledUl = styled.ul`
@@ -42,6 +42,7 @@ const ShowHide= styled.span`
     text-align:right;
     cursor:pointer;
 `;
+
 const Title = styled.a`
     font-family: 'Montserrat';
     color: inherit;
@@ -49,7 +50,24 @@ const Title = styled.a`
     @media all and (min-width: 800px){
         flex: 0 1 auto;
     }
-`
+`;
+
+const rotate = keyframes`
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+`;
+
+const Loader = styled.div`
+    border: 16px solid lightgrey;
+    border-top: 16px solid grey; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    animation: ${rotate} 2s linear infinite;
+`;
+
+
 
 
 
@@ -86,7 +104,7 @@ class News extends React.Component {
                 {<ShowHide onClick={()=>this.showComments()}>{this.state.showcomments?<i title="Hide comments" class="fas fa-sort-up"></i>
                 :<i title="Show comments" class="fas fa-sort-down"></i>}</ShowHide>}
                 {<UnstyledUl visible={this.state.showcomments}>
-                        {this.props.data.kids?(this.state.comments?this.state.comments:<li>Wait</li>):<li>No comment to show...</li>}
+                        {this.props.data.kids?(this.state.comments?this.state.comments:<Loader/>):<li>No comment to show...</li>}
                 </UnstyledUl>}
             </Newsitem>
             );

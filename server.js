@@ -11705,7 +11705,7 @@ app.get("*", function (req, res) {
     })
   ));
 
-  res.send("\n    <!DOCTYPE html>\n      <html>\n        <head>\n          <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n          <title>Hacker New Watch</title>\n          <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.0.6/css/all.css\">\n          <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>\n          <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>\n          <script src=\"/bundle.js\" defer></script>\n          <style>\n          html,body,#root, #root>* {\n            margin:0;\n            padding:0;\n            font-family: 'Lato';\n            height:100%;\n          }\n          </style>\n        </head>\n        <body>\n          <div id=\"root\">" + markup + "</div>\n        </body>\n      </html>\n      ");
+  res.send("\n    <!DOCTYPE html>\n      <html>\n        <head>\n          <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n          <title>Hacker News Watch</title>\n          <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.0.6/css/all.css\">\n          <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>\n          <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>\n          <script src=\"/bundle.js\" defer></script>\n          <style>\n          html,body,#root, #root>* {\n            margin:0;\n            padding:0;\n            font-family: 'Lato';\n            height:100%;\n          }\n          </style>\n        </head>\n        <body>\n          <div id=\"root\">" + markup + "</div>\n        </body>\n      </html>\n      ");
 });
 
 app.listen(process.env.PORT || 3000, function () {
@@ -15847,9 +15847,9 @@ var _jsxFileName = "/home/ubuntu/workspace/src/shared/pages/Home.js";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(["\n    display:flex;\n    flex-flow: row wrap;\n    & > * {\n     flex: 1 1 auto;\n    }\n"], ["\n    display:flex;\n    flex-flow: row wrap;\n    & > * {\n     flex: 1 1 auto;\n    }\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n    text-align:center;\n    width:100%\n"], ["\n    text-align:center;\n    width:100%\n"]),
-    _templateObject3 = _taggedTemplateLiteral(["\n    list-style:none;\n    width:100%\n    padding-left:0;\n    @media all and (min-width: 800px){\n        padding-left:10%;\n        padding-right:10%;\n    }\n"], ["\n    list-style:none;\n    width:100%\n    padding-left:0;\n    @media all and (min-width: 800px){\n        padding-left:10%;\n        padding-right:10%;\n    }\n"]),
+var _templateObject = _taggedTemplateLiteral(["\n    display:flex;\n    flex-flow: row wrap;\n    & > * {\n    width:100%;\n     flex: 1 1 auto;\n    }\n"], ["\n    display:flex;\n    flex-flow: row wrap;\n    & > * {\n    width:100%;\n     flex: 1 1 auto;\n    }\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n    text-align:center;\n    & > i {\n      color:grey;  \n    }\n"], ["\n    text-align:center;\n    & > i {\n      color:grey;  \n    }\n"]),
+    _templateObject3 = _taggedTemplateLiteral(["\n    list-style:none;\n    padding-left:0;\n    @media all and (min-width: 800px){\n        padding-left:10%;\n        padding-right:10%;\n    }\n"], ["\n    list-style:none;\n    padding-left:0;\n    @media all and (min-width: 800px){\n        padding-left:10%;\n        padding-right:10%;\n    }\n"]),
     _templateObject4 = _taggedTemplateLiteral(["\n    text-align:center;\n    & > a {\n        color: inherit;\n        text-decoration: underline dashed;\n        text-underline-position: under;\n    }\n"], ["\n    text-align:center;\n    & > a {\n        color: inherit;\n        text-decoration: underline dashed;\n        text-underline-position: under;\n    }\n"]);
 
 var _react = __webpack_require__(0);
@@ -15880,7 +15880,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var Container = _styledComponents2.default.div(_templateObject);
 
-var Title = _styledComponents2.default.h3(_templateObject2);
+var Title = _styledComponents2.default.div(_templateObject2);
 
 var Newslist = _styledComponents2.default.ul(_templateObject3);
 
@@ -15931,7 +15931,7 @@ var Main = function (_React$Component) {
                 {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 63
+                        lineNumber: 67
                     },
                     __self: this
                 },
@@ -15940,25 +15940,46 @@ var Main = function (_React$Component) {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 64
+                            lineNumber: 68
                         },
                         __self: this
                     },
-                    "Top 10 Hacker News Stories"
+                    _react2.default.createElement(
+                        "h3",
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 69
+                            },
+                            __self: this
+                        },
+                        "Top 10 Hacker News Stories"
+                    ),
+                    _react2.default.createElement(
+                        "i",
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 70
+                            },
+                            __self: this
+                        },
+                        "With top 20 comments and their replies"
+                    )
                 ),
                 _react2.default.createElement(
                     Newslist,
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 65
+                            lineNumber: 72
                         },
                         __self: this
                     },
                     this.state.news.map(function (n, i) {
                         return _react2.default.createElement(_News2.default, { key: i, data: n, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 67
+                                lineNumber: 74
                             },
                             __self: _this3
                         });
@@ -15969,7 +15990,7 @@ var Main = function (_React$Component) {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 70
+                            lineNumber: 77
                         },
                         __self: this
                     },
@@ -15978,7 +15999,7 @@ var Main = function (_React$Component) {
                         "a",
                         { href: "https://github.com/chuyachia", target: "_blank", __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 70
+                                lineNumber: 77
                             },
                             __self: this
                         },
@@ -38636,7 +38657,9 @@ var _templateObject = _taggedTemplateLiteral(["\n    list-style:none;\n    margi
     _templateObject2 = _taggedTemplateLiteral(["\n    display:flex;\n    flex-flow: row wrap;\n    & * {\n        flex: 1 1 100%;\n        word-wrap:break-word;\n        white-space: pre-wrap;\n    }\n    &:nth-child(even) {\n        background-color:#d8e9f3\n    }\n    &:nth-child(odd) {\n        background-color:#b2d3e6\n    }\n    padding:0.5rem;\n"], ["\n    display:flex;\n    flex-flow: row wrap;\n    & * {\n        flex: 1 1 100%;\n        word-wrap:break-word;\n        white-space: pre-wrap;\n    }\n    &:nth-child(even) {\n        background-color:#d8e9f3\n    }\n    &:nth-child(odd) {\n        background-color:#b2d3e6\n    }\n    padding:0.5rem;\n"]),
     _templateObject3 = _taggedTemplateLiteral(["\n    color:grey;\n    @media all and (min-width: 800px){\n        flex: 1 1 auto; \n    }\n"], ["\n    color:grey;\n    @media all and (min-width: 800px){\n        flex: 1 1 auto; \n    }\n"]),
     _templateObject4 = _taggedTemplateLiteral(["\n    @media all and (min-width: 800px){\n        flex: 0 1 auto;\n    };\n    text-align:right;\n    cursor:pointer;\n"], ["\n    @media all and (min-width: 800px){\n        flex: 0 1 auto;\n    };\n    text-align:right;\n    cursor:pointer;\n"]),
-    _templateObject5 = _taggedTemplateLiteral(["\n    font-family: 'Montserrat';\n    color: inherit;\n    text-decoration: inherit;\n    @media all and (min-width: 800px){\n        flex: 0 1 auto;\n    }\n"], ["\n    font-family: 'Montserrat';\n    color: inherit;\n    text-decoration: inherit;\n    @media all and (min-width: 800px){\n        flex: 0 1 auto;\n    }\n"]);
+    _templateObject5 = _taggedTemplateLiteral(["\n    font-family: 'Montserrat';\n    color: inherit;\n    text-decoration: inherit;\n    @media all and (min-width: 800px){\n        flex: 0 1 auto;\n    }\n"], ["\n    font-family: 'Montserrat';\n    color: inherit;\n    text-decoration: inherit;\n    @media all and (min-width: 800px){\n        flex: 0 1 auto;\n    }\n"]),
+    _templateObject6 = _taggedTemplateLiteral(["\n    0% { transform: rotate(0deg); }\n    100% { transform: rotate(360deg); }\n"], ["\n    0% { transform: rotate(0deg); }\n    100% { transform: rotate(360deg); }\n"]),
+    _templateObject7 = _taggedTemplateLiteral(["\n    border: 16px solid lightgrey;\n    border-top: 16px solid grey; \n    border-radius: 50%;\n    width: 50px;\n    height: 50px;\n    margin: 0 auto;\n    animation: ", " 2s linear infinite;\n"], ["\n    border: 16px solid lightgrey;\n    border-top: 16px solid grey; \n    border-radius: 50%;\n    width: 50px;\n    height: 50px;\n    margin: 0 auto;\n    animation: ", " 2s linear infinite;\n"]);
 
 var _react = __webpack_require__(0);
 
@@ -38673,7 +38696,12 @@ var Newsitem = _styledComponents2.default.li(_templateObject2);
 var Author = _styledComponents2.default.span(_templateObject3);
 
 var ShowHide = _styledComponents2.default.span(_templateObject4);
+
 var Title = _styledComponents2.default.a(_templateObject5);
+
+var rotate = (0, _styledComponents.keyframes)(_templateObject6);
+
+var Loader = _styledComponents2.default.div(_templateObject7, rotate);
 
 var hnUrl = "https://hacker-news.firebaseio.com/v0/";
 
@@ -38707,7 +38735,7 @@ var News = function (_React$Component) {
                         comments: results.map(function (c, i) {
                             return _react2.default.createElement(_Comments2.default, { key: i, data: c.data, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 74
+                                    lineNumber: 92
                                 },
                                 __self: this
                             });
@@ -38727,7 +38755,7 @@ var News = function (_React$Component) {
                 {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 83
+                        lineNumber: 101
                     },
                     __self: this
                 },
@@ -38735,7 +38763,7 @@ var News = function (_React$Component) {
                     Title,
                     { href: this.props.data.url, target: "_blank", title: "Open link", __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 84
+                            lineNumber: 102
                         },
                         __self: this
                     },
@@ -38747,7 +38775,7 @@ var News = function (_React$Component) {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 85
+                            lineNumber: 103
                         },
                         __self: this
                     },
@@ -38760,18 +38788,18 @@ var News = function (_React$Component) {
                             return _this3.showComments();
                         }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 86
+                            lineNumber: 104
                         },
                         __self: this
                     },
                     this.state.showcomments ? _react2.default.createElement("i", { title: "Hide comments", className: "fas fa-sort-up", __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 86
+                            lineNumber: 104
                         },
                         __self: this
                     }) : _react2.default.createElement("i", { title: "Show comments", className: "fas fa-sort-down", __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 87
+                            lineNumber: 105
                         },
                         __self: this
                     })
@@ -38780,26 +38808,22 @@ var News = function (_React$Component) {
                     UnstyledUl,
                     { visible: this.state.showcomments, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 88
+                            lineNumber: 106
                         },
                         __self: this
                     },
-                    this.props.data.kids ? this.state.comments ? this.state.comments : _react2.default.createElement(
-                        "li",
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 89
-                            },
-                            __self: this
+                    this.props.data.kids ? this.state.comments ? this.state.comments : _react2.default.createElement(Loader, {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 107
                         },
-                        "Wait"
-                    ) : _react2.default.createElement(
+                        __self: this
+                    }) : _react2.default.createElement(
                         "li",
                         {
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 89
+                                lineNumber: 107
                             },
                             __self: this
                         },

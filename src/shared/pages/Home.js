@@ -7,18 +7,22 @@ const Container = styled.div`
     display:flex;
     flex-flow: row wrap;
     & > * {
+    width:100%;
      flex: 1 1 auto;
     }
 `;
 
-const Title=styled.h3`
+const Title=styled.div`
     text-align:center;
-    width:100%
+    & > i {
+      color:grey;  
+    }
 `;
+
+
 
 const Newslist = styled.ul`
     list-style:none;
-    width:100%
     padding-left:0;
     @media all and (min-width: 800px){
         padding-left:10%;
@@ -61,7 +65,10 @@ class Main extends React.Component {
     render(){
         return (this.state.news?(
          <Container>
-             <Title>Top 10 Hacker News Stories</Title>
+             <Title>
+                 <h3>Top 10 Hacker News Stories</h3>
+                 <i>With top 20 comments and their replies</i>
+             </Title>
              <Newslist>
              {
              this.state.news.map((n,i)=>(<News key={i} data ={n}/>))
