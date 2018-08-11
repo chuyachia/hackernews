@@ -74,9 +74,7 @@ const serverConfig = {
       include: /\.js$/
     }),
     new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-      }
+      'process.env.NODE_ENV':JSON.stringify(process.env.NODE_ENV)
     })
     ]:[
     new webpack.BannerPlugin({
@@ -85,9 +83,7 @@ const serverConfig = {
       include: /\.js$/
     }),
     new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-      }
+      'process.env.NODE_ENV':JSON.stringify(process.env.NODE_ENV)
     }),
      new webpack.optimize.UglifyJsPlugin({
       minimize: true

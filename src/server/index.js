@@ -30,7 +30,9 @@ app.get("*",(req,res) => {
             margin:0;
             padding:0;
             font-family: 'Lato';
-            height:100%;
+          }
+          * {
+              box-sizing: border-box;
           }
           </style>
         </head>
@@ -43,5 +45,5 @@ app.get("*",(req,res) => {
 
 
 app.listen(process.env.PORT || 3000,()=>
-console.log("Server is listening")
+  console.log("Server is listening")
 )

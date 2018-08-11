@@ -15,7 +15,7 @@ const Newsitem =styled.li`
     display:flex;
     flex-flow: row wrap;
     & * {
-        flex: 1 1 100%;
+        flex: 0 1 100%;
         word-wrap:break-word;
         white-space: pre-wrap;
     }
@@ -61,8 +61,8 @@ const Loader = styled.div`
     border: 16px solid lightgrey;
     border-top: 16px solid grey; 
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto;
     animation: ${rotate} 2s linear infinite;
 `;
