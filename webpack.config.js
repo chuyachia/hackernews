@@ -66,11 +66,31 @@ const serverConfig = {
       }
     ]
   },
-  plugins: [
+  plugins: debug?[
+
     new webpack.BannerPlugin({
-      banner: "__isBrowser__ = false;",
+      banner: "__isBrowser__ = true;",
       raw: true,
       include: /\.js$/
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      }
+    })
+    ]:[
+    new webpack.BannerPlugin({
+      banner: "__isBrowser__ = true;",
+      raw: true,
+      include: /\.js$/
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      }
+    }),
+     new webpack.optimize.UglifyJsPlugin({
+      minimize: true
     })
   ]
 };

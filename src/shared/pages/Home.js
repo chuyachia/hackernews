@@ -43,7 +43,7 @@ class Home extends React.Component {
     constructor(){
         super();
         this.state={
-            news:null
+            news:[]
         };
     }
     componentDidMount(){
@@ -63,7 +63,7 @@ class Home extends React.Component {
         });
     }
     render(){
-        return (this.state.news?(
+        return(
          <Container>
              <Title>
                  <h3>Top 10 Hacker News Stories</h3>
@@ -75,7 +75,7 @@ class Home extends React.Component {
              }
              </Newslist>
              <Footer>Made by <a href="https://github.com/chuyachia" target="_blank">Chu-Ya Chia</a></Footer>
-        </Container>):(null));
+        </Container>);
     }
 }
 

@@ -9,7 +9,7 @@
     "start": "NODE_ENV=production node server.js",
     "build": "NODE_ENV=production webpack --progress",
     "start-dev": "NODE_ENV=development webpack -w & NODE_ENV=development nodemon server.js",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "jest": {
     "testPathIgnorePatterns": [
@@ -42,7 +42,6 @@
     "enzyme-adapter-react-16": "^1.2.0",
     "enzyme-to-json": "^3.3.4",
     "jest": "^23.5.0",
-    "jest-styled-components": "^5.0.1",
     "nodemon": "^1.11.0",
     "webpack": "3.10.0"
   }

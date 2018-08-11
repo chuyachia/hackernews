@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`News test News snapshot test 1`] = `
+exports[`News component test News component snapshot 1`] = `
 <styled.li>
   <styled.a
     href="http://www.getdropbox.com/u/2/screencast.html"

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comments component test Comments component snapshot 1`] = `
+<styled.div>
+  <styled.li>
+    xxx
+     said
+  </styled.li>
+  <li
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "Fake comment",
+      }
+    }
+  />
+  <styled.ul>
+    <Comments
+      data={
+        Object {
+          "by": "xxx",
+          "descendants": 71,
+          "id": 1,
+          "score": 111,
+          "text": "Fake comment",
+          "time": 1175714200,
+          "title": "Fake title",
+          "type": "story",
+          "url": "http://www.getdropbox.com/u/2/screencast.html",
+        }
+      }
+      key="0"
+    />
+    <Comments
+      data={
+        Object {
+          "by": "xxx",
+          "descendants": 71,
+          "id": 1,
+          "score": 111,
+          "text": "Fake comment",
+          "time": 1175714200,
+          "title": "Fake title",
+          "type": "story",
+          "url": "http://www.getdropbox.com/u/2/screencast.html",
+        }
+      }
+      key="1"
+    />
+  </styled.ul>
+</styled.div>
+`;

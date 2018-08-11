@@ -87,6 +87,7 @@ class News extends React.Component {
             });
             axios.all(promises)
             .then((results)=>{
+                results = results.filter(r=>!r.data.deleted);
                 results = results.slice(0,21);
                 this.setState({
                     comments:results.map(function(c,i){return <Comments key={i} data={c.data}/>})
