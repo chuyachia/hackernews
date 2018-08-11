@@ -6,5 +6,4 @@ import {render} from "react-dom";
 render(<BrowserRouter>
             <App/>
         </BrowserRouter>,
-    document.getElementById("root")
-    );
+    document.getElementById("root"));
