@@ -17,7 +17,7 @@ describe('News component test',()=>{
     });
     it('News component reacts to click', () => {
       expect(wrapper.state().showcomments).toEqual(false);
-      wrapper.find('#showhide').simulate('click');
+      wrapper.find('.fa-sort-down').simulate('click');
       expect(wrapper.state().showcomments).toEqual(true);
     });
 })

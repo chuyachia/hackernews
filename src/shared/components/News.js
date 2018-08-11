@@ -11,39 +11,27 @@ const UnstyledUl = styled.ul`
     width:100%;
 `;
 
-const Newsitem =styled.li`
-    display:flex;
-    flex-flow: row wrap;
-    & * {
-        flex: 0 1 100%;
-        word-wrap:break-word;
-        white-space: pre-wrap;
-    }
+const Newsitem = styled.li`
     &:nth-child(even) {
         background-color:#d8e9f3
     }
     &:nth-child(odd) {
         background-color:#b2d3e6
     }
+`
+const Title =styled.div`
+    display:flex;
+    flex-flow: row wrap;
+    & * {
+        flex: 1 1 100%;
+        word-wrap:break-word;
+        white-space: pre-wrap;
+    }
+
     padding:0.5rem;
 `;
 
-const Author = styled.span`
-    color:grey;
-    @media all and (min-width: 800px){
-        flex: 1 1 auto; 
-    }
-`;
-
-const ShowHide= styled.span`
-    @media all and (min-width: 800px){
-        flex: 0 1 auto;
-    };
-    text-align:right;
-    cursor:pointer;
-`;
-
-const Title = styled.span`
+const Name = styled.span`
     font-family: 'Montserrat';
     @media all and (min-width: 800px){
         flex: 0 1 auto;
@@ -53,6 +41,27 @@ const Title = styled.span`
         text-decoration: inherit;
     }
 `;
+
+const Author = styled.span`
+    color:grey;
+    @media all and (min-width: 800px){
+        flex: 1 1 auto; 
+    }
+`;
+
+const Show= styled.i`
+    cursor:pointer;
+    float:right;
+    margin:5px;
+`;
+
+const Hide = styled.i`
+    cursor:pointer;
+    position:sticky;
+    top: 5px;
+    float:right;
+    margin:5px;
+`
 
 const rotate = keyframes`
     0% { transform: rotate(0deg); }
@@ -73,7 +82,6 @@ const Sup = styled.sup`
     line-height: 0;
     font-size: 0.6rem;
 `
-
 
 
 
@@ -106,17 +114,20 @@ class News extends React.Component {
     render(){
         return(
             <Newsitem>
-                {<Title>
-                {this.props.data.title}&nbsp;
-                <Sup><a href={this.props.data.url} target="_blank"  title="Open link"><i class="fas fa-external-link-alt"></i></a></Sup>
-                </Title>}
-                {<Author>&nbsp;by&nbsp;{this.props.data.by}</Author>}
-                {<ShowHide id="showhide" onClick={()=>this.showComments()}>
-                {this.state.showcomments?<i title="Hide comments" class="fas fa-sort-up"></i>
-                :<i title="Show comments" class="fas fa-sort-down"></i>}</ShowHide>}
-                {<UnstyledUl visible={this.state.showcomments} onClick={()=>this.showComments()}>
-                        {this.props.data.kids?(this.state.comments?this.state.comments:<Loader/>):<li>No comment to show...</li>}
-                </UnstyledUl>}
+                {this.state.showcomments?
+                <Hide title="Hide comments" class="fas fa-sort-up" onClick={()=>this.showComments()}></Hide>
+                :<Show title="Show comments" class="fas fa-sort-down" onClick={()=>this.showComments()}></Show>
+                }
+                <Title>
+                    {<Name>
+                    {this.props.data.title}&nbsp;
+                    <Sup><a href={this.props.data.url} target="_blank"  title="Open link"><i class="fas fa-external-link-alt"></i></a></Sup>
+                    </Name>}
+                    {<Author>&nbsp;by&nbsp;{this.props.data.by}</Author>}
+                    {<UnstyledUl visible={this.state.showcomments}>
+                            {this.props.data.kids?(this.state.comments?this.state.comments:<Loader/>):<li>No comment to show...</li>}
+                    </UnstyledUl>}
+                </Title>
             </Newsitem>
             );
     }

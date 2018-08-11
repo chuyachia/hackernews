@@ -2,39 +2,36 @@
 
 exports[`News component test News component snapshot 1`] = `
 <styled.li>
-  <styled.span>
-    Fake title
-     
-    <styled.sup>
-      <a
-        href="http://www.getdropbox.com/u/2/screencast.html"
-        target="_blank"
-        title="Open link"
-      >
-        <i
-          className="fas fa-external-link-alt"
-        />
-      </a>
-    </styled.sup>
-  </styled.span>
-  <styled.span>
-     by 
-    xxx
-  </styled.span>
-  <styled.span
-    id="showhide"
+  <styled.i
+    className="fas fa-sort-down"
     onClick={[Function]}
-  >
-    <i
-      className="fas fa-sort-down"
-      title="Show comments"
-    />
-  </styled.span>
-  <styled.ul
-    onClick={[Function]}
-    visible={false}
-  >
-    <styled.div />
-  </styled.ul>
+    title="Show comments"
+  />
+  <styled.div>
+    <styled.span>
+      Fake title
+       
+      <styled.sup>
+        <a
+          href="http://www.getdropbox.com/u/2/screencast.html"
+          target="_blank"
+          title="Open link"
+        >
+          <i
+            className="fas fa-external-link-alt"
+          />
+        </a>
+      </styled.sup>
+    </styled.span>
+    <styled.span>
+       by 
+      xxx
+    </styled.span>
+    <styled.ul
+      visible={false}
+    >
+      <styled.div />
+    </styled.ul>
+  </styled.div>
 </styled.li>
 `;
