@@ -4,7 +4,7 @@ This React web application uses React server side rendering and CSS in JS soluti
 Webpack is used to bundle both server and browser files and to minify the bundled files in production.
 Unit test is done with Jest. The codes for testing can be found in `__test__`. The mock functions for ajax requests in tests are in`__mocks__`.
 
-[Live version](https://hackernews-watch.glitch.me/)
+Live version [https://hackernews-watch.glitch.me/](https://hackernews-watch.glitch.me/)
 #### Test instructions
 Test for Web Devs to do in ReactJS:
 
