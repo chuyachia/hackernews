@@ -43,12 +43,14 @@ const ShowHide= styled.span`
     cursor:pointer;
 `;
 
-const Title = styled.a`
+const Title = styled.span`
     font-family: 'Montserrat';
-    color: inherit;
-    text-decoration: inherit;
     @media all and (min-width: 800px){
         flex: 0 1 auto;
+    }
+    &  a {
+        color: inherit;
+        text-decoration: inherit;
     }
 `;
 
@@ -67,6 +69,10 @@ const Loader = styled.div`
     animation: ${rotate} 2s linear infinite;
 `;
 
+const Sup = styled.sup`
+    line-height: 0;
+    font-size: 0.6rem;
+`
 
 
 
@@ -100,8 +106,11 @@ class News extends React.Component {
     render(){
         return(
             <Newsitem>
-                {<Title href={this.props.data.url} target="_blank"  title="Open link">{this.props.data.title}&nbsp;</Title>}
-                {<Author>by&nbsp;{this.props.data.by}</Author>}
+                {<Title>
+                {this.props.data.title}&nbsp;
+                <Sup><a href={this.props.data.url} target="_blank"  title="Open link"><i class="fas fa-external-link-alt"></i></a></Sup>
+                </Title>}
+                {<Author>&nbsp;by&nbsp;{this.props.data.by}</Author>}
                 {<ShowHide id="showhide" onClick={()=>this.showComments()}>
                 {this.state.showcomments?<i title="Hide comments" class="fas fa-sort-up"></i>
                 :<i title="Show comments" class="fas fa-sort-down"></i>}</ShowHide>}

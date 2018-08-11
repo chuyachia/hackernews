@@ -30,6 +30,7 @@ app.get("*",(req,res) => {
             margin:0;
             padding:0;
             font-family: 'Lato';
+            height:100%;
           }
           * {
               box-sizing: border-box;

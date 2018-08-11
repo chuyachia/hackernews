@@ -2,16 +2,23 @@
 
 exports[`News component test News component snapshot 1`] = `
 <styled.li>
-  <styled.a
-    href="http://www.getdropbox.com/u/2/screencast.html"
-    target="_blank"
-    title="Open link"
-  >
+  <styled.span>
     Fake title
      
-  </styled.a>
+    <styled.sup>
+      <a
+        href="http://www.getdropbox.com/u/2/screencast.html"
+        target="_blank"
+        title="Open link"
+      >
+        <i
+          className="fas fa-external-link-alt"
+        />
+      </a>
+    </styled.sup>
+  </styled.span>
   <styled.span>
-    by 
+     by 
     xxx
   </styled.span>
   <styled.span
