@@ -94,6 +94,11 @@ class News extends React.Component {
             showcomments:false
         };
     }
+    componentDidMount(){
+        if (window.location.hash.slice(1)==this.props.data.id){
+            this.showComments();
+        }
+    }
     showComments(){
         if (!this.state.comments&&this.props.data.kids){
             var promises = this.props.data.kids.map(function(id){
@@ -108,8 +113,11 @@ class News extends React.Component {
                 });
             });
         }
+        if (window.location.hash!=this.props.data.id)
+            window.location.hash = this.props.data.id;
+
         this.setState({showcomments:this.state.showcomments?false:true});
-        
+
     }
     render(){
         return(

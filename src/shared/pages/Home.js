@@ -68,7 +68,7 @@ class Home extends React.Component {
             });
         });
     }
-    render(){
+    render(){        
         return(
          <Container>
              <Title>
@@ -77,7 +77,7 @@ class Home extends React.Component {
              </Title>
              {this.state.error?(<Title>Oops, something went wrong... I can't fetch the news.</Title>)
              :(<Newslist>
-             {this.state.news.map((n,i)=>(<News key={i} data ={n}/>))}
+             {this.state.news.map(n=>(<News key={n.id} data ={n}/>))}
              </Newslist>)
              }
              <Footer>Made by <a href="https://github.com/chuyachia" target="_blank">Chu-Ya Chia</a></Footer>
